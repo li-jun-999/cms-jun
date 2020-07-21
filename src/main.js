@@ -13,6 +13,8 @@ Vue.component(Header.name,Header)
 
 //导入mui样式 用法和bootstrap一样
 import './lib/mui/css/mui.min.css'
+//导入购物车图标样式
+import './lib/mui/css/icons-extra.css'
 
 //创建vue实例
 var vm = new Vue({
