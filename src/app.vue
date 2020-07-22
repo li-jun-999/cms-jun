@@ -5,7 +5,10 @@
         <mt-header fixed title="军哥练手项目"></mt-header>
 
         <!-- 组件内容 -->
-		<router-view></router-view>
+		<!-- 为页面增加动画 -->
+	    <transition>
+			<router-view></router-view>
+		</transition>
         <!-- 底部 tabbar -->
         <nav class="mui-bar mui-bar-tab">
 			<router-link class="mui-tab-item" to="/home">
@@ -40,6 +43,20 @@ export default {
 <style scoped lang="scss">
 	.appContainer {
 		padding-top: 40px;
+		overflow-x: hidden;
+	}
+	.v-enter {
+		opacity: 0;
+		transform: translateX(100%);
+	}
+	.v-leave-to {
+		opacity: 0;
+		transform: translateX(-100%);
+		// 解决动画闪烁的问题
+		position: absolute;
+	}
+	.v-enter-active ,.v-leave-active{
+		transition: all 0.5s ease;
 	}
 </style>>
 

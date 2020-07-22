@@ -11,6 +11,8 @@ var vr = new VueRouter({
     //匹配规则
     //在组件中添加子路由
     routes:[
+        //为页面默认加载首页
+        {path: '/',redirect:'/home'},
         {path: '/home',component:home},
         {path: '/information',component:information},
         {path: '/shopcar',component:shopcar},
