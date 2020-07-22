@@ -5,26 +5,26 @@
         <mt-header fixed title="军哥练手项目"></mt-header>
 
         <!-- 组件内容 -->
-		<h1>我是帅哥</h1>
+		<router-view></router-view>
         <!-- 底部 tabbar -->
         <nav class="mui-bar mui-bar-tab">
-			<a class="mui-tab-item mui-active" href="#tabbar">
+			<router-link class="mui-tab-item" to="/home">
 				<span class="mui-icon mui-icon-home"></span>
 				<span class="mui-tab-label">首页</span>  
-			</a>
-			<a class="mui-tab-item" href="#tabbar-with-chat">
+			</router-link>
+			<router-link class="mui-tab-item" to="/information">
 				<span class="mui-icon mui-icon-email"><span class="mui-badge">9</span></span>
 				<span class="mui-tab-label">消息</span>
-			</a>
+			</router-link>
 			<!-- 修改购物车图标 需要把图标样式也导入  把字体样式也导入-->
-			<a class="mui-tab-item" href="#tabbar-with-contact">
+			<router-link class="mui-tab-item" to="/shopcar">
 				<span class="mui-icon mui-icon-extra mui-icon-extra-cart"><span class="mui-badge">9</span></span>
 				<span class="mui-tab-label">购物车</span>
-			</a>
-			<a class="mui-tab-item" href="#tabbar-with-map">
+			</router-link>
+			<router-link class="mui-tab-item" to="/personcenter">
 				<span class="mui-icon mui-icon-gear"></span>
 				<span class="mui-tab-label">个人中心</span>
-			</a>
+			</router-link>
 		</nav>
 
     </div>

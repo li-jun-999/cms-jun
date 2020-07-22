@@ -16,8 +16,16 @@ import './lib/mui/css/mui.min.css'
 //导入购物车图标样式
 import './lib/mui/css/icons-extra.css'
 
+//导入路由对象
+import VueRouter from 'vue-router'
+//将路由对象注册到Vue身上
+Vue.use(VueRouter)
+//将暴露出的路由对象导入
+import vr from './router.js'
+
 //创建vue实例
 var vm = new Vue({
     el:'#app',
-    render: c =>c(app)
+    render: c =>c(app),
+    router:vr//将路由对象挂载到vm实例上
 })
