@@ -7,9 +7,12 @@ import Vue from 'vue'
 import app from './app.vue'
 
 //按需导入muti组件
-import {Header} from 'mint-ui'
+import {Header,Swipe, SwipeItem} from 'mint-ui'
 //将组件注册到vue身上
 Vue.component(Header.name,Header)
+//将轮播图组件注册到vue
+Vue.component(Swipe.name,Swipe)
+Vue.component(SwipeItem.name,SwipeItem)
 
 //导入mui样式 用法和bootstrap一样
 import './lib/mui/css/mui.min.css'
