@@ -26,6 +26,11 @@ Vue.use(VueRouter)
 //将暴露出的路由对象导入
 import vr from './router.js'
 
+//导入vue-resource
+import VueResource from 'vue-resource'
+//将resource注册到vue实例上
+Vue.use(VueResource)
+
 //创建vue实例
 var vm = new Vue({
     el:'#app',
