@@ -42,11 +42,18 @@ import menu3 from '../images/menu3.png'
 import menu4 from '../images/menu4.png'
 import menu5 from '../images/menu5.png'
 import menu6 from '../images/menu6.png'
+import timg from '../images/timg.jpg'
+import timg1 from '../images/timg (1).jpg'
+import timg2 from '../images/timg (2).jpg'
 
 export default {
     data() {
         return {
-            lunbotus:[], //存放轮播图的数组
+            lunbotus:[
+                {url:timg},
+                {url:timg1},
+                {url:timg2},
+            ], //存放轮播图的数组
             menu1:menu1,//解决src引入图片不显示的问题
             menu2:menu2,
             menu3:menu4,
@@ -83,16 +90,16 @@ export default {
 
 <style scoped lang="scss">
     .mint-swipe {
-        height: 200px;
+        height: 400px;
         .mint-swipe-item {
             &:nth-child(1) {
-                background-color: red;
+                background-color: none;
             }
              &:nth-child(2) {
-                background-color:green;
+                background-color:none;
             }
             &:nth-child(2) {
-                background-color:hotpink;
+                background-color:none;
             }
             //设置轮播图自适应
             img {
