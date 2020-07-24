@@ -30,6 +30,15 @@ import vr from './router.js'
 import VueResource from 'vue-resource'
 //将resource注册到vue实例上
 Vue.use(VueResource)
+// 设置请求的根路径
+Vue.http.options.root = 'http://vue.studyit.io';
+
+// 导入格式化时间的插件
+import moment from 'moment'
+// 定义全局的过滤器
+Vue.filter('dateFormat', function (dataStr, pattern = "YYYY-MM-DD HH:mm:ss") {
+  return moment(dataStr).format(pattern)
+})
 
 //创建vue实例
 var vm = new Vue({
